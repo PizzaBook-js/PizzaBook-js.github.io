@@ -1,11 +1,11 @@
-import { getRecipes } from "../api/recipe.js";
+import { getRecentRecipes } from "../api/recipe.js";
 import { html, until } from "../lib.js";
 import { spinner } from "./common.js";
 
 const homeTemplate = (recipesPromise) => html `
      <section id="home">
         <div class="hero">
-            <h2>Welcome to My Cookbook</h2>
+            <h2>Welcome to Your Pizza Book</h2>
         </div>
         <header class="section-title">Recently added recipes</header>
         <div class="recent-recipes">
@@ -31,7 +31,7 @@ export function homePage(ctx) {
 }
 
 async function loadRecipes() {
-    const { results: recipes } = await getRecipes();
+    const { results: recipes } = await getRecentRecipes();
 
     if (recipes.length == 0) {
         return html `<p>No recipes found. Be the first to post recipe!</p>`

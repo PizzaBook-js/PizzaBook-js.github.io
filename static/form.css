@@ -14,14 +14,14 @@ label {
 input[type="text"],
 input[type="password"],
 .ml textarea {
-    position: absolute;
+    /*position: absolute;*/
     right: 0px;
     width: 500px;
     padding: 8px;
 }
 
 .ml textarea {
-    height: 300px;
+    height: 220;
     resize: none;
 }
 
@@ -30,7 +30,8 @@ input[type="password"],
 }
 
 input[type="submit"] {
-    display: block;
+    display: inline-block;
+    /*only block*/
     border: none;
     margin: auto;
     background-color: salmon;
